@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  summarization_tool:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    image: docker-summarization_tool
+    volumes:
+      - type: bind
+        source: ../
+        target: /code
